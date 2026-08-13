@@ -71,11 +71,11 @@ grant role generic_scim_provisioner_role to role accountadmin;
 --  'GENERIC' — Any other SCIM-compliant IdP
 -- Foe this demo, I'm using SCIM_CLIENT=GENERIC, since curl is
 -- being used to simulate an IdP.
-create or replace security integration klysy_generic_scim_secint
+/*create or replace security integration klysy_generic_scim_secint
 type = scim
 scim_client = 'generic'
 run_as_role = 'generic_scim_provisioner_role';
-
+*/
 show integrations like '%klysy%scim%';
 
 -- Generate a SCIM Access Token.
